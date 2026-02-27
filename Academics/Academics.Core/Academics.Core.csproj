@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Service\Attendance\" />
+    <Folder Include="Service\Grades\" />
+    <Folder Include="Service\TimeTable\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Infrastructure\Common.Logging\Common.Logging.csproj" />
+    <ProjectReference Include="..\Academics.Business\Academics.Business.csproj" />
+    <ProjectReference Include="..\Academics.DataModel\Academics.DataModel.csproj" />
+  </ItemGroup>
+
+</Project>

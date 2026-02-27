@@ -1,0 +1,15 @@
+﻿{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "profiles": {  
+    "Academics": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": false,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:8041",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development;Staging"      
+      }
+    }
+  }
+}

@@ -1,0 +1,156 @@
+[
+  {
+    "AssessmentId": 101,
+    "CourseId": 1,
+    "Type": "Theory Exam",
+    "Weightage": 80,
+    "Date": "2026-03-11T09:00:00Z"
+  },
+  {
+    "AssessmentId": 102,
+    "CourseId": 1,
+    "Type": "Internal Assessment",
+    "Weightage": 20,
+    "Date": "2026-02-15T10:00:00Z"
+  },
+  {
+    "AssessmentId": 103,
+    "CourseId": 2,
+    "Type": "Theory Exam",
+    "Weightage": 80,
+    "Date": "2026-03-15T09:00:00Z"
+  },
+  {
+    "AssessmentId": 104,
+    "CourseId": 2,
+    "Type": "Practical Work",
+    "Weightage": 20,
+    "Date": "2026-02-18T11:00:00Z"
+  },
+  {
+    "AssessmentId": 105,
+    "CourseId": 3,
+    "Type": "Theory Exam",
+    "Weightage": 80,
+    "Date": "2026-03-20T09:00:00Z"
+  },
+  {
+    "AssessmentId": 106,
+    "CourseId": 3,
+    "Type": "Internal Assessment",
+    "Weightage": 20,
+    "Date": "2026-02-20T10:00:00Z"
+  },
+  {
+    "AssessmentId": 107,
+    "CourseId": 4,
+    "Type": "Theory Exam",
+    "Weightage": 80,
+    "Date": "2026-03-02T09:00:00Z"
+  },
+  {
+    "AssessmentId": 108,
+    "CourseId": 4,
+    "Type": "Internal Assessment",
+    "Weightage": 20,
+    "Date": "2026-02-10T09:30:00Z"
+  },
+  {
+    "AssessmentId": 109,
+    "CourseId": 5,
+    "Type": "Theory Exam",
+    "Weightage": 80,
+    "Date": "2026-03-05T09:00:00Z"
+  },
+  {
+    "AssessmentId": 110,
+    "CourseId": 5,
+    "Type": "Internal Assessment",
+    "Weightage": 20,
+    "Date": "2026-02-12T10:30:00Z"
+  },
+  {
+    "AssessmentId": 111,
+    "CourseId": 6,
+    "Type": "Written Examination",
+    "Weightage": 70,
+    "Date": "2026-02-27T11:00:00Z"
+  },
+  {
+    "AssessmentId": 112,
+    "CourseId": 6,
+    "Type": "Practical Examination",
+    "Weightage": 30,
+    "Date": "2026-02-05T09:30:00Z"
+  },
+  {
+    "AssessmentId": 113,
+    "CourseId": 7,
+    "Type": "Written Examination",
+    "Weightage": 70,
+    "Date": "2026-03-01T11:00:00Z"
+  },
+  {
+    "AssessmentId": 114,
+    "CourseId": 7,
+    "Type": "Practical Examination",
+    "Weightage": 30,
+    "Date": "2026-02-07T09:30:00Z"
+  },
+  {
+    "AssessmentId": 115,
+    "CourseId": 8,
+    "Type": "Written Examination",
+    "Weightage": 70,
+    "Date": "2026-03-04T11:00:00Z"
+  },
+  {
+    "AssessmentId": 116,
+    "CourseId": 8,
+    "Type": "Practical Examination",
+    "Weightage": 30,
+    "Date": "2026-02-09T09:30:00Z"
+  },
+  {
+    "AssessmentId": 117,
+    "CourseId": 9,
+    "Type": "Written Examination",
+    "Weightage": 80,
+    "Date": "2026-03-08T11:00:00Z"
+  },
+  {
+    "AssessmentId": 118,
+    "CourseId": 9,
+    "Type": "Practical Examination",
+    "Weightage": 20,
+    "Date": "2026-02-11T09:30:00Z"
+  },
+  {
+    "AssessmentId": 119,
+    "CourseId": 10,
+    "Type": "Written Examination",
+    "Weightage": 80,
+    "Date": "2026-03-02T11:00:00Z"
+  },
+  {
+    "AssessmentId": 120,
+    "CourseId": 10,
+    "Type": "Oral Test",
+    "Weightage": 20,
+    "Date": "2026-02-12T10:00:00Z"
+  },
+  {
+    "AssessmentId": 121,
+    "CourseId": 11,
+    "Type": "Written Examination",
+    "Weightage": 80,
+    "Date": "2026-03-24T11:00:00Z"
+  },
+  {
+    "AssessmentId": 122,
+    "CourseId": 11,
+    "Type": "Internal Assessment",
+    "Weightage": 20,
+    "Date": "2026-02-25T10:00:00Z"
+  }
+]

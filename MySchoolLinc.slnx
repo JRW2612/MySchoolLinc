@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Academics/">
+    <Project Path="Academics/Academics.Business/Academics.Business.csproj" Id="cb665651-cece-4a03-b855-ba925d6ff6f8" />
+    <Project Path="Academics/Academics.Core/Academics.Core.csproj" Id="e5292c8b-eac0-444d-a2f1-a07d264ba5a0" />
+    <Project Path="Academics/Academics.DataModel/Academics.DataModel.csproj" Id="4cee2208-31f9-4dae-a636-40263477c62a" />
+    <Project Path="Academics/Academics.Repository/Academics.Repository.csproj" Id="2fcda3ab-238f-495b-9b15-bd75ccaeeef6" />
+    <Project Path="Academics/Academics.Service/Academics.Service.csproj" Id="bb1c5422-becc-40fe-926d-6d3ad5bbfdb5" />
+  </Folder>
+  <Folder Name="/Infrastructure/">
+    <Project Path="Infrastructure/Common.Logging/Common.Logging.csproj" Id="7d278475-d38a-42c3-9828-d09e045b1a6a" />
+  </Folder>
+</Solution>

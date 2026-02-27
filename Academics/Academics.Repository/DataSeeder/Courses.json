@@ -1,0 +1,68 @@
+[
+  {
+    "CourseId": 1,
+    "Name": "Mathematics (NCERT)",
+    "Code": "041",
+    "MaxMarks": 100
+  },
+  {
+    "CourseId": 2,
+    "Name": "Science (NCERT)",
+    "Code": "086",
+    "MaxMarks": 100
+  },
+  {
+    "CourseId": 3,
+    "Name": "Social Science (NCERT)",
+    "Code": "087",
+    "MaxMarks": 100
+  },
+  {
+    "CourseId": 4,
+    "Name": "English Language and Literature (NCERT)",
+    "Code": "184",
+    "MaxMarks": 100
+  },
+  {
+    "CourseId": 5,
+    "Name": "Hindi Course-A (NCERT)",
+    "Code": "002",
+    "MaxMarks": 100
+  },
+  {
+    "CourseId": 6,
+    "Name": "Physics - HSC (Maharashtra State Board)",
+    "Code": "54",
+    "MaxMarks": 100
+  },
+  {
+    "CourseId": 7,
+    "Name": "Chemistry - HSC (Maharashtra State Board)",
+    "Code": "55",
+    "MaxMarks": 100
+  },
+  {
+    "CourseId": 8,
+    "Name": "Biology - HSC (Maharashtra State Board)",
+    "Code": "56",
+    "MaxMarks": 100
+  },
+  {
+    "CourseId": 9,
+    "Name": "Mathematics and Statistics - HSC (Maharashtra State Board)",
+    "Code": "40",
+    "MaxMarks": 100
+  },
+  {
+    "CourseId": 10,
+    "Name": "Marathi - SSC (Maharashtra State Board)",
+    "Code": "01",
+    "MaxMarks": 100
+  },
+  {
+    "CourseId": 11,
+    "Name": "Geography - SSC (Maharashtra State Board)",
+    "Code": "73",
+    "MaxMarks": 50
+  }
+]
