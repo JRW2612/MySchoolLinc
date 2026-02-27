@@ -9,7 +9,7 @@
         //public ICollection<AssessmentRequestModel> Assessments { get; set; } = new List<AssessmentRequestModel>();
         public int Status { get; set; }//Soft delete status: 0 = active, 1 = deleted
         public int CreatedBy { get; set; }//Admin,Teacher, only
-        public DateTime CreatedAt { get; set; }
+        public DateTimeOffset CreatedAt { get; set; }
 
     }
 }

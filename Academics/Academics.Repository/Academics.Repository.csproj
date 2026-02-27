@@ -22,4 +22,13 @@
     <ProjectReference Include="..\Academics.Business\Academics.Business.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="DataSeeder\Assessments.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="DataSeeder\Courses.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

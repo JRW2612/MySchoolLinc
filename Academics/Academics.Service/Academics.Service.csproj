@@ -8,12 +8,15 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.13" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="9.0.6" />
     <PackageReference Include="Swashbuckle.AspNetCore.Swagger" Version="9.0.6" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure\Common.Logging\Common.Logging.csproj" />
     <ProjectReference Include="..\Academics.Business\Academics.Business.csproj" />
+    <ProjectReference Include="..\Academics.Core\Academics.Core.csproj" />
+    <ProjectReference Include="..\Academics.Repository\Academics.Repository.csproj" />
   </ItemGroup>
 
 </Project>

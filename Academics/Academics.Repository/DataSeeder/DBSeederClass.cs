@@ -15,14 +15,13 @@ namespace Academics.Repository.DataSeeder
             var assessments = db.GetCollection<AssessmentModel>(constants.AssesmentsCollectionName);
             var timetables = db.GetCollection<TimeTable>(constants.TimeTablesCollectionName);
 
-
-            var SeedBasePath = Path.Combine(Directory.GetCurrentDirectory(), "DataSeeder");
+            var seedBasePath = Path.Combine(AppContext.BaseDirectory, "DataSeeder");
 
             //Seed Brands
             List<CourseModel> courseList = new List<CourseModel>();
             if ((await courses.CountDocumentsAsync(_ => true)) == 0)
             {
-                var courseData = await File.ReadAllTextAsync(Path.Combine(SeedBasePath, "Courses.json"));
+                var courseData = await File.ReadAllTextAsync(Path.Combine(seedBasePath, "Courses.json"));
                 courseList = JsonSerializer.Deserialize<List<CourseModel>>(courseData);
                 foreach (var p in courseList)
                 {
@@ -48,8 +47,8 @@ namespace Academics.Repository.DataSeeder
             List<AssessmentModel> assessmentsList = new List<AssessmentModel>();
             if ((await assessments.CountDocumentsAsync(_ => true)) == 0)
             {
-                var assessmentsData = await File.ReadAllTextAsync(Path.Combine(SeedBasePath, "Assessments.json"));
-                assessmentsList = JsonSerializer.Deserialize<List<AssessmentModel>>(assessmentsData);
+
+                var assessmentsData = await File.ReadAllTextAsync(Path.Combine(seedBasePath, "Assessments.json")); assessmentsList = JsonSerializer.Deserialize<List<AssessmentModel>>(assessmentsData);
                 foreach (var al in assessmentsList)
                 {
                     //Reset Id to let mongo add new one

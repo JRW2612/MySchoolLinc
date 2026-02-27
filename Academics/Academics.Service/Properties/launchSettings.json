@@ -4,11 +4,11 @@
     "Academics": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": false,
+      "launchBrowser": true,
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:8041",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development;Staging"      
+        "ASPNETCORE_ENVIRONMENT": "Development"      
       }
     }
   }

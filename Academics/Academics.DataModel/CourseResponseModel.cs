@@ -8,9 +8,9 @@
         public int MaxMarks { get; set; } = 100;
         //   public ICollection<AssessmentRequestModel> Assessments { get; set; } = new List<AssessmentRequestModel>();
         public int Status { get; set; }//Soft delete status: 0 = active, 1 = deleted
-        public int CreatedBy { get; set; }//Admin,Teacher, only
-        public DateTime LastUpdatedBy { get; set; }//Admin,Teacher, only
-        public DateTime CreatedAt { get; set; }
-        public DateTime LastUpdatedAt { get; set; }
+        public int CreatedBy { get; set; }//Admin,Teacher, only       
+        public DateTimeOffset CreatedAt { get; set; }
+        public int LastUpdatedBy { get; set; }//Admin,Teacher, only
+        public DateTimeOffset LastUpdatedAt { get; set; }
     }
 }

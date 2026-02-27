@@ -1,17 +1,20 @@
-﻿namespace Academics.Repository.Models.Course
+﻿using MongoDB.Bson.Serialization.Attributes;
+
+namespace Academics.Repository.Models.Course
 {
+    [BsonIgnoreExtraElements] // Tells Mongo to ignore the auto-generated '_id' field
     public class AssessmentModel
     {
         public int AssessmentId { get; set; }
         public int CourseId { get; set; }
         public string Type { get; set; } = string.Empty; // e.g., "Term Exam", "Practical"
         public int Weightage { get; set; } // percentage contribution
-        public DateTime Date { get; set; }
+        public DateTimeOffset Date { get; set; }
         public int Status { get; set; }//Soft delete status: 0 = active, 1 = deleted
 
         public int CreatedBy { get; set; }//Admin,Teacher, only
-        public DateTime LastUpdatedBy { get; set; }//Admin,Teacher, only
-        public DateTime CreatedAt { get; set; }
-        public DateTime LastUpdatedAt { get; set; }
+        public int LastUpdatedBy { get; set; }//Admin,Teacher, only
+        public DateTimeOffset CreatedAt { get; set; }
+        public DateTimeOffset LastUpdatedAt { get; set; }
     }
 }
