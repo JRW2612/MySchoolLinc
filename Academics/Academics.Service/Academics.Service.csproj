@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Infrastructure\Common.Logging\Common.Logging.csproj" />
+    <ProjectReference Include="..\Academics.Business\Academics.Business.csproj" />
   </ItemGroup>
 
 </Project>

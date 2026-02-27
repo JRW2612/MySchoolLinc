@@ -16,7 +16,7 @@ namespace Academics.Repository.Repositories.Assessment
             throw new NotImplementedException();
         }
 
-        public Task<ResponseContext<IEnumerable<AssessmentResponseModel>>> GetAllAssessments()
+        public Task<ResponseContext<AssessmentResponseModel>> GetAllAssessments()
         {
             throw new NotImplementedException();
         }

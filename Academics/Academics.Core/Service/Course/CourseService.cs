@@ -24,7 +24,7 @@ namespace Academics.Core.Service.Course
             return response;
         }
 
-        public async Task<ResponseContext<IEnumerable<CourseResponseModel>>> GetAllCourses()
+        public async Task<ResponseContext<CourseResponseModel>> GetAllCourses()
         {
             var response = await _courseRepository.GetAllCourses();
             return response;
@@ -42,9 +42,9 @@ namespace Academics.Core.Service.Course
             return response;
         }
 
-        public async Task<ResponseContext<CourseResponseModel>> UpdateCourse(CourseResponseModel courseResponse)
+        public async Task<ResponseContext<CourseResponseModel>> UpdateCourse(CourseRequestModel courseRequest)
         {
-            var response = await _courseRepository.UpdateCourse(courseResponse);
+            var response = await _courseRepository.UpdateCourse(courseRequest);
             return response;
         }
     }

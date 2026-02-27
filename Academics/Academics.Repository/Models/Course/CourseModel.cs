@@ -13,6 +13,10 @@
         public DateTime CreatedAt { get; set; }
         public DateTime LastUpdatedAt { get; set; }
 
+        public static implicit operator CourseModel(Task v)
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }
