@@ -2,8 +2,8 @@
 {
     public class ResponseContext<T>
     {
-        public T? Response { get; set; }
-        public IEnumerable<T>? Responses { get; set; }
+        public T? Item { get; set; }
+        public IEnumerable<T>? Items { get; set; }
         public string? SuceessText { get; set; }
         public string? ErrorText { get; set; }
         public int StatusCode { get; set; }

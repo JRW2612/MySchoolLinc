@@ -1,41 +1,66 @@
+using Academics.Business.Repository.Course;
+using Academics.Business.Service.Course;
+using Academics.Core.Service.Course;
+using Academics.Repository.DataSeeder;
+using Academics.Repository.Repositories.Course;
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization;
+using MongoDB.Bson.Serialization.Serializers;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
+// 1. Register MongoDB Serializers
+BsonSerializer.RegisterSerializer(new GuidSerializer(BsonType.String));
+BsonSerializer.RegisterSerializer(new DateTimeOffsetSerializer(BsonType.String));
+
+// 2. Add services to the container
+builder.Services.AddControllers();
+
+// 3. Swagger & OpenAPI Configuration (Cleaned up duplicates)
 builder.Services.AddOpenApi();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+// 4. Dependency Injection for your Repositories and Services
+builder.Services.AddScoped<ICourseRepository, CourseRepository>();
+builder.Services.AddScoped<ICourseService, CourseService>();
+
+// 5. Bind configuration
+builder.Services.Configure<Constants>(builder.Configuration.GetSection("DatabaseSettings"));
+builder.Services.AddSingleton(sp =>
+    sp.GetRequiredService<IConfiguration>().GetSection("DatabaseSettings").Get<Constants>());
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// 6. Configure the HTTP request pipeline
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
+app.UseAuthorization();
+app.MapControllers();
 
-var summaries = new[]
+// 7. Seed Mongo Data at Application Startup
+// Wrapped in a try-catch so a data formatting error doesn't crash the entire app!
+using (var scope = app.Services.CreateScope())
 {
-    "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-};
-
-app.MapGet("/weatherforecast", () =>
-{
-    var forecast = Enumerable.Range(1, 5).Select(index =>
-        new WeatherForecast
-        (
-            DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
-            Random.Shared.Next(-20, 55),
-            summaries[Random.Shared.Next(summaries.Length)]
-        ))
-        .ToArray();
-    return forecast;
-})
-.WithName("GetWeatherForecast");
-
-app.Run();
-
-internal record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
-{
-    public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    var services = scope.ServiceProvider;
+    try
+    {
+        var config = services.GetRequiredService<IConfiguration>();
+        var constants = config.GetSection("DatabaseSettings").Get<Constants>();
+        await DBSeederClass.SeedDataAsync(constants);
+    }
+    catch (Exception ex)
+    {
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "An error occurred while seeding the database. Please check your MongoDB data types.");
+    }
 }
+
+// 8. Run the application
+app.Run();

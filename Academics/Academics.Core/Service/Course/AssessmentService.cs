@@ -23,7 +23,7 @@ namespace Academics.Core.Service.Course
             return response;
         }
 
-        public async Task<ResponseContext<IEnumerable<AssessmentResponseModel>>> GetAllAssessments()
+        public async Task<ResponseContext<AssessmentResponseModel>> GetAllAssessments()
         {
             var response = await _assessmentRepository.GetAllAssessments();
             return response;
