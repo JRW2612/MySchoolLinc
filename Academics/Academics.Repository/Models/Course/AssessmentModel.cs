@@ -1,10 +1,13 @@
-﻿using MongoDB.Bson.Serialization.Attributes;
+﻿using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
 
 namespace Academics.Repository.Models.Course
 {
     [BsonIgnoreExtraElements] // Tells Mongo to ignore the auto-generated '_id' field
     public class AssessmentModel
     {
+        [BsonId]
+        [BsonRepresentation(BsonType.Int64)]
         public int AssessmentId { get; set; }
         public int CourseId { get; set; }
         public string Type { get; set; } = string.Empty; // e.g., "Term Exam", "Practical"

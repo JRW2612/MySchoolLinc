@@ -28,25 +28,23 @@ namespace Academics.Repository.Repositories.Course
             // Map CourseRequestModel -> CourseModel to satisfy the collection's document type
             try
             {
-                var courses = await _courses.Find(_ => true).ToListAsync(); // Fetch all courses
-                // Map CourseModel to CourseResponseModel
-                var courseResponses = new List<CourseModel>();
-                foreach (var course in courses)
+                var newCourse = new CourseModel
                 {
-                    courseResponses.Add(new CourseModel
-                    {
-                        CourseId = course.CourseId,
-                        Name = course.Name,
-                        Code = course.Code,
-                        MaxMarks = course.MaxMarks,
-                        Status = course.Status,
-                        CreatedBy = course.CreatedBy,
-                        CreatedAt = course.CreatedAt
-                    });
-                }
+                    // If using Option 2 (Counters), you would set CourseId = await GetNextSequenceValue("course_id");
+                    Name = courseRequest.Name,
+                    Code = courseRequest.Code,
+                    MaxMarks = courseRequest.MaxMarks,
+                    Status = courseRequest.Status,
+                    CreatedBy = courseRequest.CreatedBy,
+                    CreatedAt = DateTime.UtcNow
+                };
 
-                // Set the response with the fetched customer data
-                if (courses != null)
+                // 2. Insert the document into MongoDB
+                await _courses.InsertOneAsync(newCourse);
+
+
+                // 3. Set the response with the fetched customer data
+                if (newCourse != null)
                 {
                     response.Item = 1; // Assuming response has an Item property
                     response.StatusCode = (int)StatusCodes.Status200OK;
